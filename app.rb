@@ -6,8 +6,8 @@ class App < Sinatra::Base
   end
 
   post '/piglatinize' do
-    ring = PigLatinizer.new
-    @string = ring.pig(params[:user_phrase])
+    ring = PigLatinizer.new # creates a new instance
+    @string = ring.pig(params[:user_phrase]) # runs the instance on the user's input
     erb :piglatinize
   end
 end
